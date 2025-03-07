@@ -695,24 +695,44 @@ section,
 }
 
 .hero img {
-  position: absolute;
+  position: relative;
   inset: 0;
   display: block;
+  border-radius: 20px;
+  top: 10%;
+  left: 28%;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 60%;
+  object-fit: contain;
+  z-index: 1;
+  
+}
+.image-container {
+  position: relative;
+  top: 10%;
+  width: 30%; /* Ajusta el tamaño de la imagen */
+  height: 10%;
   z-index: 1;
 }
+
+.image-container img {
+  width: 70%;
+  height: auto;
+  object-fit: contain; /* Asegura que la imagen mantenga su aspecto */
+}
+
 
 .hero .container {
   position: relative;
   z-index: 3;
+  object-fit: contain;
 }
 
 .hero h2 {
   margin: 0;
   font-size: 64px;
   font-weight: 700;
+  
 }
 
 .hero p {
@@ -720,9 +740,15 @@ section,
   font-size: 26px;
 }
 
-.hero p span {
+.hero h2 span {
   letter-spacing: 1px;
   border-bottom: 2px solid var(--accent-color);
+}
+
+.hero p.small-text {
+  font-size: 18px; /* Tamaño de la fuente más pequeño */
+  font-style: italic; /* Opcional: poner el texto en cursiva */
+  color: var(--accent-color); /* Opcional: cambiar el color del texto */
 }
 
 .hero .social-links {
